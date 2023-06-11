@@ -224,9 +224,10 @@ class BookingKelasController extends Controller
         ->join('instrukturs','jadwal_harians.id_instruktur','=','instrukturs.id')
         ->join('deposit_uangs', 'booking_kelas.no_struk_uang', '=', 'deposit_uangs.no_struk_uang')
         ->select('booking_kelas.no_struk_booking_kelas','members.id as id_member', 'members.nama_member', 
-        'kelas.nama_kelas','instrukturs.nama_instruktur',
+        'kelas.nama_kelas', 'kelas.harga_kelas',
+        'instrukturs.nama_instruktur',
         'booking_kelas.tipe', 
-        'deposit_uangs.total_jumlah_deposit')
+        'deposit_uangs.total_deposit')
         ->where('no_struk_booking_kelas',  '=', $no_struk_booking_kelas)->get();
         return response()->json([
             'message' => 'Berhasil',

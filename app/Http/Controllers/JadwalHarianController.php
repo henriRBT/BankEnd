@@ -19,7 +19,7 @@ class JadwalHarianController extends Controller
     *
     * @return void
     */
-    public function index(Request $request)
+    public function index()
     {
         //get posts
         $today = Carbon::now()->startOfWeek();
