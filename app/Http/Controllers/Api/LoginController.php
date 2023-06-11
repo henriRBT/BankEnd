@@ -51,8 +51,7 @@ class LoginController extends Controller
                 'message' => 'Login Failed!',
             ]);
         }
-        // $pegawai =Auth::pegawai();
-        // $token =$pegawai->createToken('Authentication Token')->accessToken;
+       
 
         return response([
             'success' => true,

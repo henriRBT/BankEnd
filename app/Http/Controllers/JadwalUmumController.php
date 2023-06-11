@@ -144,8 +144,8 @@ class JadwalUmumController extends Controller
         if ($validator->fails()) {
             return response()->json($validator->errors(), 422);
         }
-
-        $inputTime = Carbon::createFromFormat('H:i', $request->sesi_kelas);
+        
+        $inputTime = Carbon::createFromFormat('H:i:s', $request->sesi_kelas);
         // Memeriksa jika menit bukan 00 atau 30
         if ($inputTime->minute != 0 && $inputTime->minute != 30) {
             return response()->json([

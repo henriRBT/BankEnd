@@ -129,6 +129,7 @@ class BookingKelasController extends Controller
                     ]);
                     $depositUang->decrement('total_deposit', $kelas->harga_kelas);
                     $depositUang->save();
+                    member::where('id', (string) $request->id_member,)->update(['deposit_uang' => $depositUang]);
                     return response(['message' => $bookingKelas], 200);
                } else{
                     return response(['message' => 'Member Ada Saldo Deposit Uang Tidak Cukup'], 400);

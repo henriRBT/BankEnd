@@ -39,7 +39,6 @@ class InstrukturController extends Controller
       * @return void
       */
     public function store(Request $request){
-
         
         //Validasi Formulir
         $validator = Validator::make($request->all(), [
@@ -98,8 +97,8 @@ class InstrukturController extends Controller
             'nama_instruktur' => 'required',
             'alamat_instruktur'    => 'required',
             'no_telepon'  => 'required',
-            'tanggal_lahir'  => 'required',
-            'email'  => 'required',
+            'tanggal_lahir'  => 'required'
+
         ]);
 
     if ($validator->fails()) {

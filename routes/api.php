@@ -2,8 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-// use App\Http\Resources\JadwalHarianResource;
-// use App\Models\jadwal_harian; 
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -31,9 +30,7 @@ Route::apiResource('/transaksi', App\Http\Controllers\TransaksiDepositKelasContr
 Route::apiResource('/instruktur', App\Http\Controllers\InstrukturController::class);
 Route::apiResource('/jadwal', App\Http\Controllers\JadwalUmumController::class);
 Route::apiResource('/harian', App\Http\Controllers\JadwalHarianController::class);
-// Route::get('/harian', function() {
-//     return JadwalHarianResource::collection(jadwal_harian::paginate());
-// });
+
 Route::apiResource('/gym', App\Http\Controllers\BookingGymController::class);
 Route::apiResource('/izin', App\Http\Controllers\IzinController::class);
 Route::apiResource('/bookingKelas', App\Http\Controllers\BookingKelasController::class);
