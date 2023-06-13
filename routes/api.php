@@ -45,6 +45,8 @@ Route::get('pegawai', 'App\Http\Controllers\Api\LoginController@showPegawai');
 Route::get('hapus/{id}', 'App\Http\Controllers\MemberController@hapus'); 
 Route::get('reset/{id}', 'App\Http\Controllers\MemberController@resetPassword');
 Route::post('generateJadwal', 'App\Http\Controllers\JadwalHarianController@generateJadwal');
+Route::post('presensi/{no_struk_gym}', 'App\Http\Controllers\BookingGymController@presensi');
+
 
 // Cetak 
 Route::get('cetakMember/{id}', 'App\Http\Controllers\MemberController@cetakMember');

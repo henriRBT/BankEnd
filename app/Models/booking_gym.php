@@ -21,4 +21,8 @@ class booking_gym extends Model
         'slot_waktu',
         'waktu_presensi'
     ];
+    protected $casts = [
+        'no_struk_gym' => 'string'
+    ];
+    protected $primaryKey = 'no_struk_gym';
 }
